@@ -1,3 +1,4 @@
+
 COPY netflix      FROM 'C:\data\netflix_titles.csv' WITH (FORMAT csv, HEADER true, ENCODING 'UTF8');
 COPY disney_plus  FROM 'C:\data\disney_plus_titles.csv'   WITH (FORMAT csv, HEADER true, ENCODING 'UTF8');
 COPY hulu         FROM 'C:\data\hulu_titles.csv'          WITH (FORMAT csv, HEADER true, ENCODING 'UTF8');
