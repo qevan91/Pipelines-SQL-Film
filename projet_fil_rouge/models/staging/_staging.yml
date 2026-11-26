@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg_film__titres
+    description: "Catalogue nettoyé issu de la table film"
+    columns:
+      - name: titre
+        tests: [not_null]
+
+  - name: stg_visionner__catalogue
+    description: "Catalogue dédoublonné issu de visionnage avec indicateurs booléens par plateforme"
+    columns:
+      - name: titre
+        tests: [unique, not_null]

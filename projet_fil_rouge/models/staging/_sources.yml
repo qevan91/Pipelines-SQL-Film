@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: streaming_raw
+    schema: public
+    description: "Tables brutes de la base PostgreSQL (sans ID technique)"
+    tables:
+      - name: film
+        description: "Catalogue complet des œuvres (films et séries)"
+        columns:
+          - name: title
+            tests: [not_null]
+      - name: visionnage
+        description: "Table centrale de présence des titres par plateforme"
+        columns:
+          - name: title
+            tests: [not_null]
+      - name: netflix
+      - name: hulu
+      - name: disney_plus
+      - name: amazon_prime

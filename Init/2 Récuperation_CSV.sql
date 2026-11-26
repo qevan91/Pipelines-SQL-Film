@@ -8,3 +8,12 @@ Alter TABLE netflix Drop column show_id;
 Alter TABLE disney_plus Drop column show_id;
 Alter TABLE amazon_prime Drop column show_id;
 Alter TABLE hulu Drop column show_id;
+CREATE TABLE film (LIKE netflix INCLUDING ALL);
+INSERT INTO film
+SELECT * FROM netflix
+UNION
+SELECT * FROM disney_plus
+UNION
+SELECT * FROM hulu
+UNION
+SELECT * FROM amazon_prime;

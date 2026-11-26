@@ -7,7 +7,7 @@ from concurrent.futures import ProcessPoolExecutor, as_completed
 from faker import Faker
 from tqdm import tqdm
 
-SRC = "Fakedata.csv"
+SRC = "../Fakedata.csv"
 DST = "Fakedata_enrichi.csv"
 N = 10_000_000  # nombre de lignes à ajouter
 WORKERS = os.cpu_count() or 4

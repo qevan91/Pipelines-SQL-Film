@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: fct_visionner
+    description: "Table de faits centralisant les œuvres uniques et leur disponibilité sur les 4 plateformes"
+    columns:
+      - name: titre
+        tests: [unique, not_null]
+      - name: nb_plateformes
+        tests: [not_null]

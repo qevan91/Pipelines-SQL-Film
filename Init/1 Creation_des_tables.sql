@@ -26,12 +26,3 @@ COPY hulu         FROM 'C:\data\hulu_titles.csv'          WITH (FORMAT csv, HEAD
 COPY amazon_prime FROM 'C:\data\amazon_prime_titles.csv'  WITH (FORMAT csv, HEADER true, ENCODING 'UTF8');
 
 
-CREATE TABLE film (LIKE netflix INCLUDING ALL);
-INSERT INTO film
-SELECT * FROM netflix
-UNION
-SELECT * FROM disney_plus
-UNION
-SELECT * FROM hulu
-UNION
-SELECT * FROM amazon_prime;
